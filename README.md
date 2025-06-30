@@ -2,6 +2,8 @@
 
 projet de fin de cours dev mobile
 
+- Auteur: Ariel Christ Austhen NGATO NDAMOKOZIADE, Etudiant M2DSIA ISI
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

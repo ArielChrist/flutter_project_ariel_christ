@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import '../models/weather_model.dart';
-import '../services/weather_service.dart';
+import 'package:flutter_project_ariel_christ/models/weather_model.dart';
+import 'package:flutter_project_ariel_christ/services/weather_service.dart';
 
 class WeatherController extends GetxController {
   final WeatherService _weatherService = Get.find<WeatherService>();

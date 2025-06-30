@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import '../screens/home_page.dart';
-import '../screens/weather_page.dart';
-import '../screens/city_detail_page.dart';
-import '../bindings/home_binding.dart';
+import 'package:flutter_project_ariel_christ/screens/home_page.dart';
+import 'package:flutter_project_ariel_christ/screens/weather_page.dart';
+import 'package:flutter_project_ariel_christ/screens/city_detail_page.dart';
+import 'package:flutter_project_ariel_christ/bindings/home_binding.dart';
 import 'app_routes.dart';
 
 class AppPages {

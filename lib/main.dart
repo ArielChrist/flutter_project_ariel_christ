@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'routes/app_pages.dart';
-import 'routes/app_routes.dart';
-import 'theme/app_theme.dart';
-import 'controllers/theme_controller.dart';
+import 'package:flutter_project_ariel_christ/routes/app_pages.dart';
+import 'package:flutter_project_ariel_christ/routes/app_routes.dart';
+import 'package:flutter_project_ariel_christ/theme/app_theme.dart';
 
 void main() {
   runApp(MyApp());

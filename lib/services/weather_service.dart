@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import '../models/weather_model.dart';
-import '../providers/weather_provider.dart';
+import 'package:flutter_project_ariel_christ/models/weather_model.dart';
+import 'package:flutter_project_ariel_christ/providers/weather_provider.dart';
 
 class WeatherService extends GetxService {
   final WeatherProvider _weatherProvider = Get.find<WeatherProvider>();
@@ -10,12 +10,12 @@ class WeatherService extends GetxService {
     'London',
     'New York',
     'Tokyo',
-    'Sydney'
+    'Sydney',
   ];
 
   Future<WeatherModel?> getWeatherForCity(String city) async {
     try {
-      final response = await _weatherProvider.getWeatherByCity(city);
+      final response = await _weatherProvider.getWeatherWithForecast(city);
 
       if (response.status.isOk && response.body != null) {
         return response.body;
@@ -35,7 +35,7 @@ class WeatherService extends GetxService {
       if (weather != null) {
         weatherList.add(weather);
       }
-      await Future.delayed(Duration(milliseconds: 500)); // Délai entre les appels
+      await Future.delayed(Duration(milliseconds: 500));
     }
 
     return weatherList;

@@ -1,61 +1,80 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_ariel_christ/utils/constante.dart';
 
 class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
-      primarySwatch: Colors.blue,
       brightness: Brightness.light,
-      scaffoldBackgroundColor: Colors.grey[50],
+      primaryColor: primaryColorlight,
+      scaffoldBackgroundColor: Colors.white,
       appBarTheme: AppBarTheme(
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
+        backgroundColor: Colors.white,
+        foregroundColor: primaryColorlight,
         elevation: 0,
       ),
+      cardColor: cardColorlight,
       cardTheme: CardTheme(
-        elevation: 4,
+        color: cardColorlight,
+        elevation: 6,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.blue,
+          backgroundColor: primaryColorlight,
           foregroundColor: Colors.white,
+          padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
         ),
+      ),
+      progressIndicatorTheme: ProgressIndicatorThemeData(
+        color: secondaryColorlight,
+      ),
+      colorScheme: ColorScheme.light(
+        primary: primaryColorlight,
+        secondary: secondaryColorlight,
       ),
     );
   }
 
   static ThemeData get darkTheme {
+
     return ThemeData(
-      primarySwatch: Colors.blue,
       brightness: Brightness.dark,
-      scaffoldBackgroundColor: Colors.grey[900],
+      primaryColor: primaryColordark,
+      scaffoldBackgroundColor: Color(0xFF121212),
       appBarTheme: AppBarTheme(
-        backgroundColor: Colors.grey[850],
+        backgroundColor: cardColordark,
         foregroundColor: Colors.white,
         elevation: 0,
       ),
+      cardColor: cardColordark,
       cardTheme: CardTheme(
+        color: cardColordark,
         elevation: 4,
-        color: Colors.grey[800],
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.blue,
+          backgroundColor: primaryColordark,
           foregroundColor: Colors.white,
+          padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
         ),
+      ),
+      progressIndicatorTheme: ProgressIndicatorThemeData(
+        color: secondaryColordark,
+      ),
+      colorScheme: ColorScheme.dark(
+        primary: primaryColordark,
+        secondary: secondaryColordark,
       ),
     );
   }

@@ -1,38 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../controllers/home_controller.dart';
-import '../../controllers/theme_controller.dart';
-import '../../routes/app_routes.dart';
+import 'package:flutter_project_ariel_christ/controllers/home_controller.dart';
+import 'package:flutter_project_ariel_christ/controllers/theme_controller.dart';
+import 'package:flutter_project_ariel_christ/routes/app_routes.dart';
+import 'package:flutter_project_ariel_christ/widgets/background.dart'; // ← Importe le widget
 
 class HomePage extends GetView<HomeController> {
   final ThemeController themeController = Get.find<ThemeController>();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Weather App'),
-        actions: [
-          Obx(() => IconButton(
-            icon: Icon(
-              themeController.isDarkMode ? Icons.light_mode : Icons.dark_mode,
-            ),
-            onPressed: themeController.toggleTheme,
-          )),
-        ],
-      ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Theme.of(context).primaryColor.withOpacity(0.3),
-              Theme.of(context).scaffoldBackgroundColor,
-            ],
-          ),
+    return ThemedBackground( // ← Ajout ici
+      child: Scaffold(
+        backgroundColor: Colors.transparent, // ← Important pour voir l’image
+        appBar: AppBar(
+          title: Text('Weather App'),
+          actions: [
+            Obx(() => IconButton(
+              icon: Icon(
+                themeController.isDarkMode ? Icons.light_mode : Icons.dark_mode,
+              ),
+              onPressed: themeController.toggleTheme,
+            )),
+          ],
         ),
-        child: Center(
+        body: Center(
           child: Padding(
             padding: EdgeInsets.all(24.0),
             child: Column(

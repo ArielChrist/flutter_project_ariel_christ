@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../controllers/home_controller.dart';
-import '../../controllers/weather_controller.dart';
-import '../../widgets/progress_gauge.dart';
-import '../../widgets/loading_messages.dart';
-import '../../widgets/weather_card.dart';
-import '../../routes/app_routes.dart';
+import 'package:flutter_project_ariel_christ/controllers/home_controller.dart';
+import 'package:flutter_project_ariel_christ/controllers/weather_controller.dart';
+import 'package:flutter_project_ariel_christ/widgets/progress_gauge.dart';
+import 'package:flutter_project_ariel_christ/widgets/loading_messages.dart';
+import 'package:flutter_project_ariel_christ/widgets/weather_card.dart';
+import 'package:flutter_project_ariel_christ/routes/app_routes.dart';
 
 class WeatherPage extends GetView<HomeController> {
   final WeatherController weatherController = Get.find<WeatherController>();
