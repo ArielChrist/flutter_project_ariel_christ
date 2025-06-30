@@ -2,11 +2,18 @@
 
 projet de fin de cours dev mobile
 
+- Titre: Application de météo
 - Auteur: Ariel Christ Austhen NGATO NDAMOKOZIADE, Etudiant M2DSIA ISI
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Dans ce projet, nous avons concu une application pour avoir les previsions meteo de cinq villes a savoir Dakar, Thies, Mbour (Senegal) et
+
+Bangui, Bambari(Republique Centrafricaine). 
+Des donnees meteos fournies par l'API 
+## OpenWeatherMap. 
+
+
 
 A few resources to get you started if this is your first Flutter project:
 

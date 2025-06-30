@@ -3,18 +3,18 @@ import 'package:get/get.dart';
 import 'package:flutter_project_ariel_christ/controllers/home_controller.dart';
 import 'package:flutter_project_ariel_christ/controllers/theme_controller.dart';
 import 'package:flutter_project_ariel_christ/routes/app_routes.dart';
-import 'package:flutter_project_ariel_christ/widgets/background.dart'; // ← Importe le widget
+import 'package:flutter_project_ariel_christ/widgets/background.dart';
 
 class HomePage extends GetView<HomeController> {
   final ThemeController themeController = Get.find<ThemeController>();
 
   @override
   Widget build(BuildContext context) {
-    return ThemedBackground( // ← Ajout ici
+    return ThemedBackground(
       child: Scaffold(
-        backgroundColor: Colors.transparent, // ← Important pour voir l’image
+        backgroundColor: Colors.transparent,
         appBar: AppBar(
-          title: Text('Weather App'),
+          title: Text('Météo'),
           actions: [
             Obx(() => IconButton(
               icon: Icon(
@@ -37,7 +37,7 @@ class HomePage extends GetView<HomeController> {
                 ),
                 SizedBox(height: 32),
                 Text(
-                  'Bienvenue dans Weather App! 🌤️',
+                  'Bienvenue dans l\'application de météo, 🌤️',
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),

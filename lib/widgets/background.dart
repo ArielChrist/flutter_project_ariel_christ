@@ -13,7 +13,7 @@ class ThemedBackground extends StatelessWidget {
       fit: StackFit.expand,
       children: [
         Image.asset(
-          'assets/images/background_image.webp', // Remplace par ton chemin
+          'assets/images/background_image.webp',
           fit: BoxFit.cover,
           color: isDark ? Colors.black.withOpacity(0.6) : null,
           colorBlendMode: isDark ? BlendMode.darken : null,

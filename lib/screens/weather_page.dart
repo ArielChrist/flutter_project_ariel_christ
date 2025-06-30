@@ -31,11 +31,18 @@ class WeatherPage extends GetView<HomeController> {
 
         return _buildWeatherList(context);
       }),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: _restartProcess,
+        child: Icon(Icons.refresh),
+        backgroundColor: Theme.of(context).primaryColor,
+        foregroundColor: Colors.white,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 
   Widget _buildLoadingView(BuildContext context) {
-    // Démarrer le chargement des données et l'animation
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (controller.progress == 0.0) {
         controller.startProgress();
@@ -80,11 +87,7 @@ class WeatherPage extends GetView<HomeController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.error_outline,
-              size: 80,
-              color: Colors.red,
-            ),
+            Icon(Icons.error_outline, size: 80, color: Colors.red),
             SizedBox(height: 24),
             Text(
               'Oops! Une erreur est survenue',
@@ -119,40 +122,19 @@ class WeatherPage extends GetView<HomeController> {
   }
 
   Widget _buildWeatherList(BuildContext context) {
-    return Column(
-      children: [
-        // Bouton recommencer en haut
-        Container(
-          padding: EdgeInsets.all(16),
-          child: ElevatedButton(
-            onPressed: _restartProcess,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(Icons.refresh),
-                SizedBox(width: 8),
-                Text('Recommencer'),
-              ],
-            ),
+    return ListView.builder(
+      padding: EdgeInsets.symmetric(vertical: 16),
+      itemCount: weatherController.weatherList.length,
+      itemBuilder: (context, index) {
+        final weather = weatherController.weatherList[index];
+        return WeatherCard(
+          weather: weather,
+          onTap: () => Get.toNamed(
+            AppRoutes.CITY_DETAIL,
+            arguments: weather,
           ),
-        ),
-        // Liste des données météo
-        Expanded(
-          child: ListView.builder(
-            itemCount: weatherController.weatherList.length,
-            itemBuilder: (context, index) {
-              final weather = weatherController.weatherList[index];
-              return WeatherCard(
-                weather: weather,
-                onTap: () => Get.toNamed(
-                  AppRoutes.CITY_DETAIL,
-                  arguments: weather,
-                ),
-              );
-            },
-          ),
-        ),
-      ],
+        );
+      },
     );
   }
 

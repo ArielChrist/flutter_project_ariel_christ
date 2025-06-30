@@ -24,17 +24,14 @@ class HomeController extends GetxController {
     _isCompleted.value = false;
     _currentMessageIndex.value = 0;
 
-    // Timer pour le progrès
     _progressTimer = Timer.periodic(Duration(milliseconds: 100), (timer) {
       if (_progress.value >= 1.0) {
         timer.cancel();
         _isCompleted.value = true;
       } else {
-        _progress.value += 0.02; // Progression de 2% toutes les 100ms (5 secondes total)
+        _progress.value += 0.02;
       }
     });
-
-    // Timer pour changer les messages
     _messageTimer = Timer.periodic(Duration(seconds: 2), (timer) {
       if (_isCompleted.value) {
         timer.cancel();

@@ -6,11 +6,11 @@ class WeatherService extends GetxService {
   final WeatherProvider _weatherProvider = Get.find<WeatherProvider>();
 
   final List<String> cities = [
-    'Paris',
-    'London',
-    'New York',
-    'Tokyo',
-    'Sydney',
+    'Bangui',
+    'Bambari',
+    'Dakar',
+    'Thies',
+    'Mbour',
   ];
 
   Future<WeatherModel?> getWeatherForCity(String city) async {

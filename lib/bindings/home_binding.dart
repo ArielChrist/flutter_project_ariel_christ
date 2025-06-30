@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import '../controllers/home_controller.dart';
-import '../controllers/weather_controller.dart';
-import '../controllers/theme_controller.dart';
-import '../providers/weather_provider.dart';
-import '../services/weather_service.dart';
+import 'package:flutter_project_ariel_christ/controllers/home_controller.dart';
+import 'package:flutter_project_ariel_christ/controllers/weather_controller.dart';
+import 'package:flutter_project_ariel_christ/controllers/theme_controller.dart';
+import 'package:flutter_project_ariel_christ/providers/weather_provider.dart';
+import 'package:flutter_project_ariel_christ/services/weather_service.dart';
 
 class HomeBinding extends Bindings {
   @override

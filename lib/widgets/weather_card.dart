@@ -22,7 +22,6 @@ class WeatherCard extends StatelessWidget {
           padding: EdgeInsets.all(16),
           child: Row(
             children: [
-              // Icône météo
               Container(
                 width: 60,
                 height: 60,
@@ -37,7 +36,6 @@ class WeatherCard extends StatelessWidget {
                 ),
               ),
               SizedBox(width: 16),
-              // Informations ville
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

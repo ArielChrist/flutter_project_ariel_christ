@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_ariel_christ/utils/constante.dart';
+import 'package:flutter_project_ariel_christ/utils/constantes.dart';
 
 class AppTheme {
   static ThemeData get lightTheme {
